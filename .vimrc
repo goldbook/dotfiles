@@ -9,8 +9,5 @@ set tabstop=2       " 画面上のタブ幅
 set shiftwidth=2    " インデント時に自動的に挿入されるタブ幅
 set softtabstop=2   " キーボードで<Tab>キーを押したときに挿入される空白の量
 
-" 色テーマを指定
-colorscheme darkblue
-
 " ハイライト検索を有効化
 set hlsearch
