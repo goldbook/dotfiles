@@ -1,2 +1,8 @@
-" è‰²ãƒ†ãƒ¼ãƒã‚’æŒ‡å®š
+" Fƒe[ƒ}‚ğw’è
 colorscheme darkblue
+
+" ƒr[ƒv‚Ì‘ã‚í‚è‚ÉƒrƒWƒ…ƒAƒ‹ƒxƒ‹(‰æ–Êƒtƒ‰ƒbƒVƒ…)‚ğg‚¤
+set noerrorbells
+set novisualbell
+set visualbell t_vb=
+
