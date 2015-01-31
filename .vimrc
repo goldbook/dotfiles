@@ -1,3 +1,5 @@
+colorscheme darkblue
+
 set nocompatible
 set enc=japan
 
@@ -41,12 +43,20 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'fatih/vim-go'
+if has('clientserver')
+    NeoBundle 'thinca/vim-singleton'
+    call singleton#enable()
+endif
+
 "======== NeoBundle ========
 au FileType php    set sw=4 ts=4 sw=4 sts=4 expandtab autoindent
 au FileType ruby   set sw=2 ts=2 sw=2 sts=2 expandtab autoindent
+au FileType eruby  set sw=2 ts=2 sw=2 sts=2 expandtab autoindent
 au FileType smarty set sw=2 ts=2 sw=2 sts=2 expandtab autoindent
 au FileType tsv    set sw=4 ts=4 sw=4 sts=4 autoindent
 au FileType txt    set sw=2 ts=2 sw=2 sts=2 expandtab autoindent formatoptions=q
+au FileType go     set sw=4 ts=4 sts=4 noet
 set sw=2 ts=2 sw=2 sts=2 expandtab autoindent " デフォではソフトタブ
 
 au QuickfixCmdPost make,grep,grepadd,vimgrep copen
@@ -76,5 +86,17 @@ set textwidth=0                 " 自動改行を無効にする
 set virtualedit=block           " フリーカーソルモード
 set guioptions+=a               " 選択部分をコピー
 set autochdir                   " 編集中ファイルのディレクトリへ移動
+set number
 
 syntax on " Enable syntax highlighting
+
+" for golang {{{
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+set completeopt=menu,preview
+" }}}
