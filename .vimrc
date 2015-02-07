@@ -48,6 +48,7 @@ if has('clientserver')
     NeoBundle 'thinca/vim-singleton'
     call singleton#enable()
 endif
+NeoBundle 'Shougo/vimproc'
 
 "======== NeoBundle ========
 au FileType php    set sw=4 ts=4 sw=4 sts=4 expandtab autoindent
@@ -96,7 +97,7 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+" autocmd FileType go autocmd BufWritePre <buffer> Fmt
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 set completeopt=menu,preview
 
