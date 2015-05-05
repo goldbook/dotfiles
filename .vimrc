@@ -48,7 +48,6 @@ if has('clientserver')
     NeoBundle 'thinca/vim-singleton'
     call singleton#enable()
 endif
-NeoBundle 'Shougo/vimproc'
 
 "======== NeoBundle ========
 au FileType php    set sw=4 ts=4 sw=4 sts=4 expandtab autoindent
@@ -88,6 +87,8 @@ set virtualedit=block           " フリーカーソルモード
 set guioptions+=a               " 選択部分をコピー
 set autochdir                   " 編集中ファイルのディレクトリへ移動
 set number
+set list
+set listchars=tab:^\ ,trail:~ "Tab、行末の半角スペースを明示的に表示する。
 
 syntax on " Enable syntax highlighting
 
