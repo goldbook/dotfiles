@@ -15,38 +15,40 @@ filetype off            " for vundle
 
 if has("vim_starting")
   set rtp+=$HOME/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/_vim/bundle'))
-endif
+  call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'git://github.com/timcharper/textile.vim.git'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'osyo-manga/vim-watchdogs'
-NeoBundle 'thinca/vim-quickrun'
-let g:quickrun_config = {}
-let g:quickrun_config['_'] = {
-      \   'runner'                    : 'vimproc',
-      \   'runner/vimproc/updatetime' : 100,
-      \   'outputter'                 : 'multi:buffer:quickfix',
-      \   'outputter/buffer/split'    : ''
-      \}
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'vim-scripts/Align'
-let g:Align_xstrlen=3
-NeoBundle 'vim-scripts/SQLUtilities'
-NeoBundle "Chiel92/vim-autoformat"
-NeoBundle 'kchmck/vim-coffee-script'
-set laststatus=2
-NeoBundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'fatih/vim-go'
-if has('clientserver')
-    NeoBundle 'thinca/vim-singleton'
-    call singleton#enable()
+  NeoBundle 'fuenor/qfixgrep'
+  NeoBundle 'git://github.com/timcharper/textile.vim.git'
+  NeoBundle 'itchyny/lightline.vim'
+  NeoBundle 'kannokanno/previm'
+  NeoBundle 'osyo-manga/vim-watchdogs'
+  NeoBundle 'thinca/vim-quickrun'
+  let g:quickrun_config = {}
+  let g:quickrun_config['_'] = {
+        \   'runner'                    : 'vimproc',
+        \   'runner/vimproc/updatetime' : 100,
+        \   'outputter'                 : 'multi:buffer:quickfix',
+        \   'outputter/buffer/split'    : ''
+        \}
+  NeoBundle 'tpope/vim-markdown'
+  NeoBundle 'tyru/open-browser.vim'
+  NeoBundle 'vim-scripts/Align'
+  let g:Align_xstrlen=3
+  NeoBundle 'vim-scripts/SQLUtilities'
+  NeoBundle "Chiel92/vim-autoformat"
+  NeoBundle 'kchmck/vim-coffee-script'
+  set laststatus=2
+  NeoBundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_enable_on_vim_startup=1
+  let g:indent_guides_guide_size=1
+  NeoBundle 'tpope/vim-surround'
+  NeoBundle 'fatih/vim-go'
+  NeoBundle 'derekwyatt/vim-scala'
+  " if has('clientserver')
+  "   NeoBundle 'thinca/vim-singleton'
+  "   call singleton#enable()
+  " endif
+  call neobundle#end()
 endif
 
 "======== NeoBundle ========
@@ -108,3 +110,5 @@ let g:go_highlight_structs = 1
 " }}}
 
 set guifont=MS_Gothic:h13
+
+set hlsearch
