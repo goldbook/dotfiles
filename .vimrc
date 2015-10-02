@@ -44,6 +44,8 @@ if has("vim_starting")
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'fatih/vim-go'
   NeoBundle 'derekwyatt/vim-scala'
+  NeoBundle 'pangloss/vim-javascript'
+  NeoBundle 'mxw/vim-jsx'
   " if has('clientserver')
   "   NeoBundle 'thinca/vim-singleton'
   "   call singleton#enable()
@@ -112,3 +114,5 @@ let g:go_highlight_structs = 1
 set guifont=MS_Gothic:h13
 
 set hlsearch
+
+set backspace=indent,eol,start " バックスペースが効かないの対策
