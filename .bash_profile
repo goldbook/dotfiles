@@ -1,4 +1,3 @@
-echo "hogeeeeeeeeeeeeeeeeeeeeeeeee"
 alias vim='/c/Program\ Files/vim/vim74/vim.exe'
 alias view='/c/Program\ Files/vim/vim74/vim.exe -R'
 alias vimdiff='/c/Program\ Files/vim/vim74/vim.exe -d'
